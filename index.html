@@ -5,31 +5,41 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>JS Documentation</title>
 
+      <!-- FOntawesome -->
+      <script
+         src="https://kit.fontawesome.com/c8c47f29f6.js"
+         crossorigin="anonymous"
+      ></script>
       <link rel="stylesheet" href="css/style.css" />
    </head>
    <body>
-      <div class="container">
-         <aside class="sidebar">
+      <nav class="sidebar">
+         <div id="nav-toggle">
+            <i class="fa fa-bars"></i>
+         </div>
+         <!-- Hidden -->
+         <div class="scroll-content" id="nav-bar">
             <h1>JS Documentation</h1>
-            <div class="scroll-content">
-               <ul class="side-links">
-                  <li><a href="#introduction">Introduction</a></li>
-                  <li><a href="#what">What you should already know</a></li>
-                  <li><a href="#js">JavaScript and Java</a></li>
-                  <li><a href="#hello">Hello World</a></li>
-                  <li><a href="#var">Variables</a></li>
-                  <li><a href="#declare">Declaring variables</a></li>
-                  <li><a href="#scope">Variable scope</a></li>
-                  <li><a href="#global">Global variables</a></li>
-                  <li><a href="#constant">Constants</a></li>
-                  <li><a href="#types">Data Types</a></li>
-                  <li><a href="#else">if...else statements</a></li>
-                  <li><a href="#while">while statements</a></li>
-                  <li><a href="#func">Function declaration</a></li>
-                  <li><a href="#ref">Reference</a></li>
-               </ul>
-            </div>
-         </aside>
+            <ul class="side-links">
+               <li><a href="#introduction">Introduction</a></li>
+               <li><a href="#what">What you should already know</a></li>
+               <li><a href="#js">JavaScript and Java</a></li>
+               <li><a href="#hello">Hello World</a></li>
+               <li><a href="#var">Variables</a></li>
+               <li><a href="#declare">Declaring variables</a></li>
+               <li><a href="#scope">Variable scope</a></li>
+               <li><a href="#global">Global variables</a></li>
+               <li><a href="#constant">Constants</a></li>
+               <li><a href="#types">Data Types</a></li>
+               <li><a href="#else">if...else statements</a></li>
+               <li><a href="#while">while statements</a></li>
+               <li><a href="#func">Function declaration</a></li>
+               <li><a href="#ref">Reference</a></li>
+            </ul>
+         </div>
+      </nav>
+
+      <div class="container">
          <!-- Main Content -->
          <main class="main">
             <section id="introduction">

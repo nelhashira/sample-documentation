@@ -7,14 +7,16 @@
    box-sizing: border-box;
 }
 
+html,
+body {
+   scroll-behavior: smooth;
+}
+
 body {
    font-family: Montserrat, sans-serif;
    font-size: 1rem;
    line-height: 1.5;
    color: #2d3436;
-   height: 100%;
-   max-width: 100%;
-   overflow: hidden;
 }
 
 a {
@@ -26,43 +28,61 @@ ul {
    list-style-type: none;
 }
 
-.container {
-   max-width: 100%;
-   display: flex;
-}
-
 /* Sidebar section */
 .sidebar {
-   min-width: 300px;
-   height: 100%;
-   border-right: 1px solid #2d3436;
-   position: absolute;
-   top: 0;
-   left: 0;
-   overflow: auto;
+   width: 100%;
+   position: fixed;
+   height: 60px;
+   background-color: #2d3436;
+   color: #dfe6e9;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 1rem 2rem;
+}
+
+.fa-bars {
+   font-size: 1.75rem;
+   cursor: pointer;
 }
 
 .main {
-   max-width: 100%;
-   height: 100%;
-   padding: 2rem;
-   display: grid;
-   position: absolute;
-   left: 320px;
-   overflow-y: auto;
+   padding: 1rem 0;
 }
 
-.sidebar h1 {
-   font-weight: 500;
-   font-size: 1.5rem;
+.scroll-content {
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #2d3436;
+   width: 300px;
+   z-index: 99;
+   height: 100%;
+   overflow-y: auto;
+   transform: translateX(-100%);
+   transition: transform 500ms ease-in-out;
+}
+
+.scroll-content-open {
+   transform: translateX(0);
+}
+
+.scroll-content h1 {
    padding: 1rem;
+   font-weight: 400;
+   border-bottom: 1px solid #ecf0f1;
 }
 
 .side-links li a {
-   font-size: 1.2rem;
-   border-top: 1px solid rgba(1, 1, 1, 0.7);
+   font-size: 1rem;
+   border-bottom: 1px solid transparent;
    display: block;
-   padding: 0.5rem 1rem;
+   padding: 1rem;
+   color: #ecf0f1;
+}
+
+.side-links li:hover a {
+   border-bottom: 1px solid #dfe6e9;
 }
 
 .main ul {
@@ -95,10 +115,14 @@ code {
    text-decoration: underline;
 }
 
+.container {
+   margin: auto;
+}
+
 /*	Extra small devices (phones, 600px and down)	*/
 @media only screen and (max-width: 600px) {
    .container {
-      min-width: 576px;
+      max-width: 450px;
    }
 }
 
